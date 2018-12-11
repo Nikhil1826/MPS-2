@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            </LinearLayout>
+            <ScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginTop="10dp">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        cardview:cardUseCompatPadding="true"
+                        android:layout_gravity="center_horizontal"
+                        cardview:cardElevation="2dp"
+                        android:layout_marginTop="10dp"
+                        cardview:cardCornerRadius="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="1">
+                            <android.support.v7.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                cardview:cardUseCompatPadding="true"
+                                android:layout_gravity="center_horizontal"
+                                cardview:cardElevation="2dp"
+                                android:layout_marginTop="10dp"
+                                cardview:cardCornerRadius="4dp">
+                                <ImageView
+                                    android:layout_width="140dp"
+                                    android:layout_height="140dp"
+                                    android:background="@drawable/ic_app"
+                                    android:layout_gravity="center_horizontal"
+                                    android:id="@+id/imageViewStudent"/>
+                            </android.support.v7.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/txtHeading"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:hint="Kindly Enter Details"
+                                android:textAppearance="@android:style/TextAppearance.Large"
+                                android:layout_marginTop="10dp"
+                                android:theme="@style/AppTheme"
+                                android:layout_gravity="center_horizontal" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        cardview:cardElevation="2dp"
+                        android:layout_marginTop="10dp"
+                        cardview:cardCornerRadius="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary"
+                                android:id="@+id/txtEnquiryRegist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Personal Details"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true" />
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtRegistration">
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="15dp"
+                                    android:id="@+id/txtFNameTextInput">
+                                    <EditText
+                                        android:id="@+id/txtRegFName"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="textCapSentences"
+                                        android:hint="Child's Name" />
+                                </android.support.design.widget.TextInputLayout>
+                                <android.support.design.widget.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="85dp">
+
+                                    <EditText
+                                        android:id="@+id/txtRegDOB"
+                                        android:focusableInTouchMode="false"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Child's DOB"
+                                        />
+                                </android.support.design.widget.TextInputLayout>
+                            </RelativeLayout>
+
+                            <RadioGroup
+                                android:orientation="horizontal"
+                                android:id="@+id/radioEnqGender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp">
+
+                                <RadioButton
+                                    android:id="@+id/radioRegMale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male"
+                                    android:checked="false" />
+
+                                <RadioButton
+                                    android:id="@+id/radioRegFemale"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Female" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        cardview:cardElevation="2dp"
+                        android:layout_marginTop="10dp"
+                        cardview:cardCornerRadius="0dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Parent's Details"
+                                android:paddingTop="10dp"/>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+                                <EditText
+                                    android:id="@+id/edtFatherName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Name"
+                                    android:layout_alignParentRight="true"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+
+                                <EditText
+                                    android:id="@+id/edtFatherQualification"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Qualification"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtFatherOccupation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Occupation"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtFatherCompanyName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Company Name"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1" />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+
+                                <EditText
+                                    android:id="@+id/edtFatherOfficeAddess"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Office Address"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"
+                                    />
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/edtFatherEmail"
+                                    android:hint="Father's E-mail Address"
+                                    android:inputType="textEmailAddress"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtFatherPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Father's Phone No.(9...,9...,..)"
+                                    android:inputType="number|phone|textPhonetic"
+                                    android:lines="1"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+                                <EditText
+                                    android:id="@+id/edtMotherName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Name"
+                                    android:layout_alignParentRight="true"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+
+                                <EditText
+                                    android:id="@+id/edtMotherQualification"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Qualification"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtMotherOccupation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Occupation"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtMotherCompanyName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Company Name"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1" />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+
+                                <EditText
+                                    android:id="@+id/edtMotherOfficeAddess"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Office Address"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"
+                                    />
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/edtMotherEmail"
+                                    android:hint="Mother's E-mail Address"
+                                    android:inputType="textEmailAddress"
+
+                                    android:lines="1"/>
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtMotherPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Mother's Phone No.(9...,9...,..)"
+                                    android:inputType="number|phone|textPhonetic"
+                                    android:lines="1"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtMonthlyIncome"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Family's Monthly income"
+                                    android:maxLength="8"
+                                    android:inputType="number"
+                                    android:lines="1"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Residential Address"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="5dp">
+                                <EditText
+                                    android:id="@+id/edtSiblingDetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Sibling Details(Name,D.O.B.,School Name)"
+                                    android:inputType="textCapSentences"
+                                    android:lines="1"
+                                    />
+
+                            </android.support.design.widget.TextInputLayout>
+                            <!--<android.support.design.widget.TextInputLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--app:hintTextAppearance="@android:style/TextAppearance.Medium"-->
+                            <!--android:layout_gravity="center_horizontal"-->
+                            <!--android:layout_marginTop="5dp">-->
+                            <!--<EditText-->
+                            <!--android:id="@+id/txtRegCurrentDate"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:hint="Registration's Date"-->
+                            <!--android:ems="10"-->
+                            <!--android:focusableInTouchMode="false"-->
+                            <!--android:layout_alignParentRight="true" />-->
+                            <!--</android.support.design.widget.TextInputLayout>-->
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_horizontal"
+                        cardview:cardElevation="2dp"
+                        android:id="@+id/cardViewClass"
+                        android:layout_marginTop="10dp"
+                        cardview:cardCornerRadius="0dp">
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="20dp"
+                            android:paddingRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary"
+                                android:id="@+id/txtCoutrseDetailTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Class Details"
+                                />
+
+                            <Spinner
+                                android:id="@+id/spnCourses"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_alignParentRight="true" />
+                            <Spinner
+                                android:id="@+id/spnBatches"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:hint="Batches"
+                                android:ems="10"
+                                android:layout_alignParentRight="true" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/batchNoticeId"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:textColor="@android:color/holo_red_dark" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <Button
+                        android:id="@+id/ivRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Register"
+                        android:background="@drawable/custom_btn"
+                        android:layout_below="@+id/spinnerCourses"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@drawable/customcolor"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

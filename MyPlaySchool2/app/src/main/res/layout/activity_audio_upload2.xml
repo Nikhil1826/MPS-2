@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardOne"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/eight_dp"
+        android:elevation="@dimen/four_dp"
+        app:cardCornerRadius="@dimen/four_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerAudience"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_margin="@dimen/eight_dp"/>
+
+            <TextView
+                android:layout_margin="@dimen/eight_dp"
+                android:id="@+id/selectedAud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text=""
+                android:gravity="left"/>
+
+            <TextView
+                android:layout_margin="@dimen/eight_dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selectedAud"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:id="@+id/textViewFile"
+                android:visibility="gone"
+                android:text=""/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardTwo"
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        app:cardCornerRadius="@dimen/four_dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/four_dp"
+                android:id="@+id/tvChoosePdfCard"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/four_dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PDF"
+                    android:id="@+id/tvChoosePdf"
+                    android:gravity="center"
+                    android:padding="@dimen/eight_dp"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:elevation="@dimen/four_dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                cardview:cardElevation="7dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:id="@+id/tvChooseAudioCard"
+                app:cardCornerRadius="@dimen/four_dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Audio"
+                    android:id="@+id/tvChooseAudio"
+                    android:gravity="center"
+                    android:padding="@dimen/eight_dp"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                cardview:cardElevation="7dp"
+                android:layout_gravity="center_horizontal"
+                android:elevation="@dimen/four_dp"
+                android:layout_weight="1"
+                android:id="@+id/tvChooseImageCard"
+                app:cardCornerRadius="@dimen/four_dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Image"
+                    android:gravity="center"
+                    android:padding="@dimen/eight_dp"
+                    android:textColor="@android:color/black"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:id="@+id/tvChooseImage"
+                    />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardThree"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        android:elevation="@dimen/four_dp"
+        app:cardCornerRadius="@dimen/four_dp">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/eight_dp">
+
+            <EditText
+                android:id="@+id/edtChooseFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textMultiLine|textCapWords" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimary"
+                android:layout_weight="1"
+                android:id="@+id/chooseFile"
+                android:layout_marginTop="@dimen/eight_dp"
+                app:cardCornerRadius="@dimen/four_dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose File"
+                    android:gravity="center"
+                    android:id="@+id/tvChooseNext"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:padding="@dimen/eight_dp"
+                    android:textColor="@android:color/white" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

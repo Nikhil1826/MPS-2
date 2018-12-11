@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:cardview="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cardview:cardElevation="5dp"
+        cardview:cardCornerRadius="4dp"
+        cardview:cardUseCompatPadding="true"
+        android:layout_marginTop="@dimen/eight_dp"
+        android:layout_marginRight="@dimen/eight_dp"
+        android:layout_marginLeft="@dimen/eight_dp"
+        android:layout_marginBottom="@dimen/eight_dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="Mode of Payment:"
+                android:id="@+id/textViewModeAcc"
+                android:layout_marginTop="@dimen/eight_dp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioCashAcc"
+                    android:text="Cash"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioChequeAcc"
+                    android:text="Cheque"
+                    android:layout_marginLeft="8dp"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioNEFTAcc"
+                    android:text="NEFT"
+                    android:layout_marginLeft="8dp"/>
+
+            </RadioGroup>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Amount to pay"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtAdvanceCashAcc"
+                    android:inputType="number"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/eight_dp">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputChequeAcc"
+                    android:layout_width="match_parent"
+                    app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Cheque Number"
+                        android:layout_height="wrap_content"
+                        android:maxLength="6"
+                        android:inputType="phone|number"
+                        android:id="@+id/editTextChequeAcc"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Cheque Date"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone|number"
+                        android:id="@+id/edtChequeDate"
+                        android:focusableInTouchMode="false"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/eight_dp">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/textInputNEFTAcc"
+                    android:layout_width="match_parent"
+                    app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Transaction Number"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:id="@+id/edtNEFTAcc"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:hint="Date"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone|number"
+                        android:id="@+id/edtNEFTDate"
+                        android:focusableInTouchMode="false"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/textInputRemarks"
+                android:layout_width="match_parent"
+                app:hintTextAppearance="@android:style/TextAppearance.Medium"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/eight_dp">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Remarks"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextRemarksAcc"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </android.support.design.widget.TextInputLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAddAccAmount"
+                android:text="Proceed"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/eight_dp"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

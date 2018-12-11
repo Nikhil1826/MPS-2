@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:foreground="@drawable/card_select_bgrnd"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="2dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="4dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/typeView"
+            android:background="@color/colorPrimary"
+            android:layout_alignTop="@+id/tvcourse_title"
+            android:layout_alignBottom="@+id/tvcourse_title"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Course Title"
+            android:layout_marginLeft="@dimen/eight_dp"
+            android:padding="@dimen/four_dp"
+            android:textColor="@color/colorPrimary"
+            android:id="@+id/tvcourse_title"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Duration :"
+            android:id="@+id/tvduration_title"
+            android:layout_below="@+id/tvcourse_title"
+            android:layout_alignLeft="@+id/tvcourse_title"
+            android:layout_alignStart="@+id/tvcourse_title"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="duration"
+            android:id="@+id/tvduration"
+            android:layout_below="@+id/tvcourse_title"
+            android:layout_toRightOf="@+id/tvduration_title"
+            android:layout_toEndOf="@+id/tvduration_title"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Hours : "
+            android:visibility="gone"
+            android:id="@+id/tvhour_title"
+            android:layout_below="@+id/tvduration_title"
+            android:layout_alignLeft="@+id/tvduration_title"
+            android:layout_alignStart="@+id/tvduration_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="hour"
+            android:id="@+id/tvhour"
+            android:visibility="gone"
+            android:layout_below="@+id/tvduration_title"
+            android:layout_toRightOf="@+id/tvhour_title"
+            android:layout_toEndOf="@+id/tvhour_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="fee"
+            android:visibility="gone"
+            android:id="@+id/tvcoursefee"
+            android:layout_below="@+id/tvhour"
+            android:layout_toEndOf="@+id/tvcourse_title"
+            android:layout_toRightOf="@+id/tvcourcefee_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Course Fee : "
+            android:visibility="gone"
+            android:id="@+id/tvcourcefee_title"
+            android:layout_below="@+id/tvhour_title"
+            android:layout_alignLeft="@+id/tvhour_title"
+            android:layout_alignStart="@+id/tvhour_title" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

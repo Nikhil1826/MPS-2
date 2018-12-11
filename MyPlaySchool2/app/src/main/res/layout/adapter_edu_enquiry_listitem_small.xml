@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lOfferCategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true"
+    android:background="@drawable/custom_btn_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_btn_grey"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="1dp"
+            android:id="@+id/view_enquiry_item"
+            app:cardBackgroundColor="@color/colorlightgreyTwo"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvEnqName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:text="Name"
+                    android:layout_marginTop="@dimen/four_dp"
+                    android:layout_marginLeft="@dimen/four_dp"
+                    android:layout_marginRight="@dimen/four_dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tvEnqSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLength="30"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:text="About"
+                    android:layout_marginLeft="@dimen/four_dp"
+                    android:layout_marginRight="@dimen/four_dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/tvEnqDateTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:text="Date Time"
+                    android:layout_marginLeft="@dimen/four_dp"
+                    android:layout_marginRight="@dimen/four_dp"
+                    android:layout_marginBottom="@dimen/four_dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:singleLine="true" />
+
+
+                <!--<View-->
+                    <!--android:id="@+id/view_enquiry_item"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:layout_marginLeft="0.5dp"-->
+                    <!--android:layout_marginRight="0.5dp"-->
+                    <!--android:background="@android:color/white" />-->
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <!--<TextView-->
+            <!--android:id="@+id/"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="center_vertical|center_horizontal"-->
+            <!--android:gravity="center_vertical|center_horizontal"-->
+            <!--android:padding="@dimen/two_dp"-->
+
+            <!--android:text="Category Name"-->
+            <!--android:textColor="@color/colorDarkgrey"-->
+            <!--android:textSize="@dimen/twelve_dp" />-->
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+
+    <!--android:layout_width="145dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="4dp"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:background="@drawable/custom_btn_grey"-->
+        <!--android:orientation="vertical">-->
+        <!--&lt;!&ndash;<ImageView-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:id="@+id/tvEnqImage"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<de.hdodenhof.circleimageview.CircleImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="80dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="80dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/tvEnqImage"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/student"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<View&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="1dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/lightgray"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_margin="2dp" />&ndash;&gt;-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingLeft="5dp"-->
+            <!--android:paddingRight="5dp"-->
+            <!--android:paddingTop="5dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvEnqName"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:marqueeRepeatLimit="marquee_forever"-->
+                <!--android:lines="1"-->
+                <!--android:scrollHorizontally="true"-->
+                <!--android:text="Name"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall"-->
+                <!--android:textColor="@color/colorPrimary" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvEnqSubject"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:marqueeRepeatLimit="marquee_forever"-->
+                <!--android:maxLength="30"-->
+                <!--android:lines="1"-->
+                <!--android:scrollHorizontally="true"-->
+                <!--android:text="About"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvEnqDateTime"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:fadingEdge="horizontal"-->
+                <!--android:marqueeRepeatLimit="marquee_forever"-->
+                <!--android:lines="1"-->
+                <!--android:scrollHorizontally="true"-->
+                <!--android:text="Date Time"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tvEnqDays"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:fadingEdge="horizontal"-->
+                <!--android:marqueeRepeatLimit="marquee_forever"-->
+                <!--android:lines="1"-->
+                <!--android:scrollHorizontally="true"-->
+                <!--android:text="Days"-->
+                <!--android:textAppearance="?android:attr/textAppearanceSmall" />-->
+        <!--</LinearLayout>-->
+
+        <!--<View-->
+            <!--android:id="@+id/view_enquiry_item"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="3dp"-->
+            <!--android:background="@color/cardview_dark_background"-->
+            <!--android:ellipsize="marquee" />-->
+    <!--</LinearLayout>-->
+<!--</LinearLayout>-->

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainPageSwipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorlightgrey">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <!--<include-->
+            <!--android:id="@+id/toolbar"-->
+            <!--layout="@layout/toolbar" />-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/toolbar_gradient"-->
+            <!--android:gravity="bottom"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="@dimen/twelve_dp">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/textViewName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Android Studio"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+            <!--android:textColor="@android:color/white" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/textViewEmail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:text="android.studio@android.com"-->
+            <!--android:textColor="@android:color/white" />-->
+
+            <!--<View-->
+            <!--android:layout_width="128dp"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginTop="@dimen/four_dp"-->
+            <!--android:background="@android:color/white" />-->
+            <!--</LinearLayout>-->
+
+            <com.auribisesmyplayschool.myplayschool.classes.MyGridView
+                android:id="@+id/gridViewMainActivityOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorlightgrey"
+                android:horizontalSpacing="1dp"
+                android:numColumns="3"
+                android:verticalSpacing="1dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twelve_dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/eight_dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:text="Today's Enquiry Visits"
+                            android:textColor="@color/colorDarkgrey" />
+
+                        <ImageView
+                            android:id="@+id/ivVisitInfo"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_info_black" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/four_dp"
+                        android:layout_marginLeft="@dimen/eight_dp"
+                        android:layout_marginRight="@dimen/eight_dp"
+                        android:layout_marginTop="@dimen/four_dp"
+                        android:background="@color/lightgray" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/lvMainEnquiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+                    <LinearLayout
+                        android:id="@+id/tvMainEnquiryListElseLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/two_dp">
+
+                            <TextView
+                                android:id="@+id/tvMainEnquiryListElse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:padding="@dimen/eight_dp"
+                                android:text="No Visits For Today"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.auribisesmyplayschool.myplayschool.classes.MyGridView
+                android:id="@+id/gridViewMainActivityTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twelve_dp"
+                android:background="@color/colorlightgrey"
+                android:horizontalSpacing="1dp"
+                android:numColumns="3"
+                android:verticalSpacing="1dp" />
+
+            <LinearLayout
+                android:id="@+id/lUpcomingJoiningsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twelve_dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/eight_dp"
+                    android:weightSum="2">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Upcoming Joining Students"
+                        android:textColor="@color/colorDarkgrey" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/four_dp"
+                        android:layout_marginLeft="@dimen/eight_dp"
+                        android:layout_marginRight="@dimen/eight_dp"
+                        android:layout_marginTop="@dimen/four_dp"
+                        android:background="@color/lightgray" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/lvUpcomingJoining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+                    <LinearLayout
+                        android:id="@+id/tvUpcomingJoiningListElseLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/two_dp">
+
+                            <TextView
+                                android:id="@+id/tvUpcomingJoiningListElse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:padding="@dimen/eight_dp"
+                                android:text="No Visits For Today"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.auribisesmyplayschool.myplayschool.classes.MyGridView
+                android:id="@+id/gridViewMainActivityThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/twelve_dp"
+                android:background="@color/colorlightgrey"
+                android:horizontalSpacing="1dp"
+                android:numColumns="3"
+                android:verticalSpacing="1dp" />
+
+            <LinearLayout
+                android:id="@+id/lAppInstalls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/twelve_dp"
+                android:layout_marginTop="@dimen/twelve_dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNumberOfParentsInstalled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.8"
+                    android:background="@android:color/white"
+                    android:gravity="left"
+                    android:padding="@dimen/eight_dp"
+                    android:text="Number of parents using App: 0"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/colorDarkgrey" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="128dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/twelve_dp"
+                android:background="@color/colorDarkgrey"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvMAHeaderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/four_dp"
+                android:gravity="center_horizontal"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

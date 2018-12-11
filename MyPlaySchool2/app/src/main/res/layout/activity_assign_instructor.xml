@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_assign_instructor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <TextView
+            android:paddingLeft="16dp"
+            android:layout_width="0dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Teacher Name"/>
+        <TextView
+            android:layout_width="0dp"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Teacher Phone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"/>
+
+    <ListView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:listSelector="@android:color/transparent"
+        android:id="@+id/listViewTeachers"/>
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:id="@+id/btnAssignTeachers"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:text="Assign Teachers"/>
+
+</LinearLayout>

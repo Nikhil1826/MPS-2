@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="2dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View android:background="@color/colorPrimary"
+                android:layout_width = "4dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:layout_alignTop="@+id/tvInvoiceTitle"
+                android:layout_alignBottom="@+id/llBalance" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Invoice"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/tvInvoiceTitle"
+                android:maxLength="30"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/view_enquiry_item"
+                android:paddingTop="@dimen/four_dp"
+                android:paddingLeft="@dimen/four_dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llBalance"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/tvInvoiceTitle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Date"
+                    android:layout_weight="1"
+                    android:id="@+id/tvInvoiceDate"
+                    android:maxLength="30"
+                    android:layout_below="@+id/tvInvoiceTitle"
+                    android:layout_toRightOf="@+id/view_enquiry_item"
+                    android:layout_toEndOf="@+id/view_enquiry_item"
+                    android:paddingLeft="@dimen/four_dp"
+                    android:paddingBottom="@dimen/four_dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Balance"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:id="@+id/tvInvoiceBalance"
+                    android:maxLength="30"
+                    android:layout_below="@+id/tvInvoiceTitle"
+                    android:layout_toRightOf="@+id/view_enquiry_item"
+                    android:layout_toEndOf="@+id/view_enquiry_item"
+
+                    android:paddingBottom="@dimen/four_dp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

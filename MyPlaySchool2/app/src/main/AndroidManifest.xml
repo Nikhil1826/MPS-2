@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.auribisesmyplayschool.myplayschool">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".adminApp.activity.AdminMainActivity" />
+        <activity android:name=".adminApp.activity.ManageCourseActivity" />
+        <activity android:name=".adminApp.activity.ManageBranchManagerActivity" />
+        <activity android:name=".adminApp.activity.CollectionGraphActivity" />
+        <activity android:name=".adminApp.activity.ChangeProfileActivity" />
+        <activity android:name=".adminApp.activity.DigitalMessageActivity" />
+        <activity android:name=".adminApp.activity.AdminAboutUsActivity" />
+        <activity android:name=".adminApp.activity.AddCourseActivity" />
+        <activity android:name=".adminApp.activity.ManageBranchActivity" />
+        <activity android:name=".adminApp.activity.AddUserActivity" />
+        <activity android:name=".adminApp.activity.ViewAssignedBranchesActivity" />
+        <activity android:name=".adminApp.activity.AddBranchActivity" />
+        <activity android:name=".adminApp.activity.BranchCourseActivity" />
+        <activity android:name=".adminApp.activity.ManageBranchCourseActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.AddEnquiryActivity" />
+        <activity android:name=".activity.ManageEnquiryActivity" />
+        <activity android:name=".activity.ViewEnquiryDetailActivity" />
+        <activity android:name=".activity.AddStudentActivity" />
+        <activity android:name=".activity.ImageCaptureActivity" />
+        <activity android:name=".activity.AddBatchActivity" />
+        <activity android:name=".activity.BatchListActivity" />
+        <activity android:name=".activity.CourseListActivity" />
+        <activity android:name=".activity.TeachersListActivity" />
+        <activity android:name=".activity.AssignInstructorActivity" />
+        <activity android:name=".activity.LinkTeacherSection" />
+        <activity android:name=".activity.StudentListActivity" />
+        <activity android:name=".activity.FeeSelectActivty" />
+        <activity android:name=".adminApp.activity.RouteBusesActivity" />
+        <activity android:name=".activity.TransportActivity" />
+        <activity android:name=".activity.ViewDriversActivity" />
+        <activity android:name=".activity.ViewMaidActivity" />
+        <activity android:name=".adminApp.activity.AddFeeCategoryActivity" />
+        <activity android:name=".adminApp.activity.AddFeeHeadsActivity" />
+        <activity
+            android:name=".adminApp.activity.FeeHeadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".activity.StudentFeeListActivity" />
+        <activity android:name=".activity.UpdateFeeStructure" />
+        <activity android:name=".activity.ManageFeeAccountActivity" />
+        <activity android:name=".activity.BuildInvoiceActivity" />
+        <activity android:name=".activity.DashboardActivity" />
+        <activity android:name=".activity.SendDigitalMsgActivity" />
+        <activity android:name=".activity.UpdateMsgActivity" />
+        <activity android:name=".activity.SelectStudentActivity" />
+        <activity android:name=".activity.AudioUploadActivity2" />
+        <activity android:name=".activity.ViewRoutesActivity" />
+        <activity android:name=".activity.ViewBusesActivity" />
+        <activity android:name=".activity.StudentAttendanceActivity" />
+        <activity android:name=".activity.GenerateFeeInvoceActivity" />
+        <activity android:name=".activity.TeacherHomeActivity"></activity>
+    </application>
+
+</manifest>

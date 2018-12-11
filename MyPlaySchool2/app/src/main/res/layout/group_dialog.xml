@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="@dimen/eight_dp">
+
+	<Spinner android:id="@+id/spinnerGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/eight_dp"
+		android:layout_marginBottom="@dimen/eight_dp"/>
+	<RadioGroup
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:visibility="gone"
+		android:layout_marginTop="@dimen/eight_dp"
+		android:layout_marginBottom="@dimen/eight_dp">
+		<RadioButton
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/rbtnStuActive"
+			android:text="Active"
+			android:checked="true"
+			android:layout_weight=".5"/>
+		<RadioButton
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:id="@+id/rbtnStuInActive"
+			android:text="Inactive"
+			android:layout_weight=".5"
+			android:checked="false"/>
+	</RadioGroup>
+
+    <Button android:layout_gravity="center"
+		android:id="@+id/buttonRet"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/eight_dp"
+		android:layout_marginBottom="@dimen/eight_dp"
+		android:background="@drawable/custom_btn"
+		android:text="Select"
+		android:textColor="@drawable/customcolor"
+		android:textStyle="bold"/>
+</LinearLayout>

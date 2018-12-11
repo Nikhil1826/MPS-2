@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity">
+
+    <item android:id="@+id/action_inactive"
+        android:title="Inactive Students"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_active"
+        android:title="Active Students"
+        app:showAsAction="never" />
+
+    <!--<item android:id="@+id/action_upcoming_joinings"-->
+        <!--android:title="Upcoming Joinings"-->
+        <!--app:showAsAction="never" />-->
+
+    <item android:id="@+id/Search"
+        android:title="@string/menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/Sort"
+        app:showAsAction="withText|ifRoom"
+        android:orderInCategory="100"
+        android:title="Filter"
+        />
+    <item android:id="@+id/studentExport"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:title="Export"
+        />
+
+
+
+    <!--<item android:id="@+id/action_change"
+        android:title="Renew Fee"
+        app:showAsAction="never" />-->
+
+
+</menu>

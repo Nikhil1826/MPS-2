@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/Search_list"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:title="Search"/>
+    <!--<item android:id="@+id/SearchDateFilter"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:title="Filter By Date Range"
+        />-->
+    <item android:id="@+id/mT_Information"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        android:title="Information"
+        android:icon="@drawable/ic_info"
+        android:visible="false"
+        />
+    <item android:id="@+id/enquiryRecordInfo"
+        app:showAsAction="always"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_info"
+        android:title="Enquiry" />
+</menu>
